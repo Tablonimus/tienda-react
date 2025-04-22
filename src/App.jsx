@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Card from "./Card";
 const initialProductsState = ["Producto 1", "Producto 2", "Producto 3"];
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
       <ul>
         {/* {products.length == 0 && "No hay productos agregados"} */}
         {products.map((item, index) => (
-          <li key={index}>{item}</li>
+          <Card key={index} name={item}/>
         ))}
       </ul>
     </div>
